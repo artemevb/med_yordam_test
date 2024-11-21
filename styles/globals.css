@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+}
+
+body {
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    transform: translateX(-3000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(25px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  90% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.modal-enter {
+  animation: bounceInLeft 0.75s;
+}
+
+a.telegram-icon:hover .icon-fill {
+  fill: #fff;
+}
+
+a.telegram-icon:hover .icon-stroke {
+  stroke: #fff;
+}
+
+.active {
+  background-color: #1d4ed8; /* Change to your preferred color */
+  color: white;
+}
