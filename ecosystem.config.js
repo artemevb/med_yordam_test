@@ -1,13 +1,11 @@
 module.exports = {
     apps: [
         {
-            name: "med_yordam_testnp",
-            script: "./server.js", // Основной файл приложения
-            args: "--port 2222",
-            instances: 1,
-            autorestart: true,
-            watch: false,
+            name: "med_yordam",
+            script: "npm",
+            args: "start",
             env: {
+                PORT: 2222,
                 NODE_ENV: "production",
             },
         },
